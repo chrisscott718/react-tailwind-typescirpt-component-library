@@ -1,0 +1,6 @@
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./awesome-component-library.cjs.production.min.js');
+} else {
+  module.exports = require('./awesome-component-library.cjs.development.js');
+}

@@ -1,0 +1,36 @@
+"use strict";
+var helpers = require("../example/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  Object.defineProperty(exports, '__esModule', {
+    value: true
+  });
+  function _interopDefault(ex) {
+    return ex && typeof ex === 'object' && ('default' in ex) ? ex['default'] : ex;
+  }
+  var React = _interopDefault(require('react'));
+  var react = require('@headlessui/react');
+  var ToggleSwitch = function ToggleSwitch(_ref) {
+    var enabled = _ref.enabled, onChange = _ref.onChange;
+    return React.createElement(react.Switch, {
+      checked: enabled,
+      onChange: onChange,
+      className: (enabled ? 'bg-green-500' : 'bg-gray-400') + "\n          relative inline-flex flex-shrink-0 h-7 w-14 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75"
+    }, React.createElement("span", {
+      className: "sr-only"
+    }, "Use setting"), React.createElement("span", {
+      "aria-hidden": "true",
+      className: (enabled ? 'translate-x-7' : 'translate-x-0') + "\n            pointer-events-none inline-block h-6 w-6 rounded-full bg-white shadow-lg transform ring-0 transition ease-in-out duration-200"
+    }));
+  };
+  _c = ToggleSwitch;
+  exports.ToggleSwitch = ToggleSwitch;
+  var _c;
+  $RefreshReg$(_c, "ToggleSwitch");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
