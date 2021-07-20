@@ -1,12 +1,12 @@
 import React from 'react';
 import { Switch } from '@headlessui/react';
 
-export interface Props {
+export interface ToggleSwitchProps {
   enabled: boolean;
   onChange: (value: Boolean) => void;
 }
 
-export const ToggleSwitch = ({ enabled, onChange }: Props) => (
+export const ToggleSwitch = ({ enabled, onChange }: ToggleSwitchProps) => (
   <Switch
     checked={enabled}
     onChange={onChange}
